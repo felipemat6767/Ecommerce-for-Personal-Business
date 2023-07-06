@@ -1,38 +1,162 @@
-.App {
-  text-align: center;
+body{
+  background-color: rgb(247, 245, 220);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*HomePage*/
+
+.NavLinks{
+  display: flex;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.PageLinks{
+  width: 55%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.PageLinks a{
+text-decoration: none;
+font-family:Georgia, 'Times New Roman', Times, serif;
+color: rgb(130, 65, 65);
+border-bottom: none;
+transition: border-bottom ease-in 1s;
+}
+
+.PageLinks a:hover{
+  border-bottom: 1px solid black;
+}
+
+.NavIcons{
+  display: flex;
+  align-items: center;
+}
+
+.NavIcons span {
+  padding: 20px;
+  color: rgb(208, 206, 206);
+  transition: color ease-out 1s, transform ease-out 1s;
+}
+
+.NavIcons span:hover{
+color: rgb(213, 104, 104);
+transform: scale(1.2);
+}
+
+/*FirstSection*/
+
+.FirstSection{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+
+}
+
+.IntroSection{
   display: flex;
   flex-direction: column;
+  padding: 20px;
+  text-align: center;
   align-items: center;
+}
+.IntroSection p{
+  font-size: 22px;
+  color: slategrey;
+  font-family: sans-serif;
+}
+.IntroSection button{
+  
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  color: brown;
+  background-color: transparent;
+  transition: background-color ease-in-out 0.5s;
+}
+
+.IntroSection button:hover{
+background-color: aliceblue;
+}
+
+.ImgIntroSection img{
+width: 60vh;
+height: 60vh;
+object-position: center;
+
+}
+
+/*Shop*/
+
+.Contenedor-Shop{
+margin: 0 auto;
+width: 70%;
+}
+
+.Contenedor-Productos{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
+.Producto{
+  background-color: rgb(234, 233, 208);
+ flex-grow: 1;
+ flex-basis: calc(25% - 0px);
+ margin: 10px;
+ text-align: center;
+ font-size: 10px;
+ width: 100%;
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.Prod-Img img{
+width: 100%;
+height: 200px;
+
+}
+
+.Prod-Button{
+  margin-bottom: 10px;
+  background-color: khaki;
+  border: 1px thin black;
+}
+
+/*Modal*/
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: none;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-container {
+  position: relative;
+  padding: 1rem;
+  min-width: 320px;
+  max-width: 480px;
+  min-height: 200px;
+  max-height: 600px;
+  overflow-y: auto;
+  background-color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.modal.is-open {
+  display: flex;
 }

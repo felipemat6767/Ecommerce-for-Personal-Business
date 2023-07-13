@@ -15,22 +15,21 @@ const ShoppingCartSection = () => {
     }, [shoppingCart])
 
     return (
-        <div className = "ShoppingCart">
+        <div className="ShoppingCart">
             <h4>Your Cart</h4>
             {shoppingCart.length > 0 ? (
                 <>
-                    <ul>
-                        {
-                            shoppingCart.map((item) => {
-                                return (
-                                    <ItemCart
-                                        key={item.id}
-                                        item={item}
-                                        UpdateShoppingCart={UpdateShoppingCart}
-                                    />
-                                )
-                            })}
-                    </ul>
+                    {
+                        shoppingCart.map((item) => {
+                            return (
+                                <ItemCart
+                                    key={item.id}
+                                    item={item}
+                                    UpdateShoppingCart={UpdateShoppingCart}
+                                />
+                            )
+                        })}
+
                 </>
             ) : (
                 <div className="">

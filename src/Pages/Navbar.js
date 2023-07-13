@@ -9,7 +9,6 @@ const Navbar = () => {
     const [active, setActive] = useState(false)
    const openMenu = () => {
         setActive(!active)
-        console.log(active)
    }
     return (
         <nav className='NavLinks'>
@@ -25,7 +24,6 @@ const Navbar = () => {
             </div>
             <span><FontAwesomeIcon icon={faCartShopping} /></span>
            <FontAwesomeIcon icon={faHeart} onClick={openMenu} className='navIcons'/>
-           
             <div className={`submenu-wrap ${active ? "submenu-wrap open-menu" : ""}`}>
                 <div className='sub-menu'>
                     <ShoppingCartSection></ShoppingCartSection>

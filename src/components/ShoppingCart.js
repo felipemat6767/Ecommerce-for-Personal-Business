@@ -5,7 +5,6 @@ import { ProviderContext } from '../Provider/Provider';
 const ShoppingCartSection = () => {
     const { shoppingCart, UpdateShoppingCart } = useContext(ProviderContext);
     const [TotalValue, setTotalValue] = useState(0)
-    console.log(shoppingCart)
     useEffect(() => {
         setTotalValue(shoppingCart.map((item) => {
             let result = item.quantity * item.price
@@ -16,7 +15,8 @@ const ShoppingCartSection = () => {
     }, [shoppingCart])
 
     return (
-        <div>
+        <div className = "ShoppingCart">
+            <h4>Your Cart</h4>
             {shoppingCart.length > 0 ? (
                 <>
                     <ul>

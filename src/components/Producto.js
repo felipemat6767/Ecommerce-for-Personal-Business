@@ -28,8 +28,9 @@ const Producto = ({ el }) => {
             <Modal isOpen={isOpen} closeModal={closeModal}>
                 <ProdPage el={el}></ProdPage>
             </Modal>
-
         </div>
+
+        
     )
 }
 

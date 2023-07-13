@@ -15,6 +15,7 @@ const Shop = () => {
             <Producto el={el} key={el.key}
             ></Producto>
           </article>
+          
         )))}
       </div>
     </div>

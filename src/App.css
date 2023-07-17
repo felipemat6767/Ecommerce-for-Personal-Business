@@ -70,6 +70,7 @@ body {
   align-items: center;
 }
 
+
 /*FirstSection*/
 
 .FirstSection {
@@ -119,14 +120,15 @@ body {
 
 .Contenedor-Shop {
   margin: 0 auto;
-  width: 70%;
+  width: 75%;
+  display: flex;
 }
 
 .Contenedor-Productos {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
+  flex-basis: calc(80%);
 }
 
 .Producto {
@@ -161,6 +163,21 @@ body {
   margin: 15px 0 10px;
 }
 
+/*Sidebar*/
+
+.Sidebar{
+  list-style: none;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-right: 20px;
+}
+
+.Sidebar li{
+  padding-bottom: 10px;
+  cursor: pointer;
+}
 /*Modal*/
 .modal {
   position: fixed;

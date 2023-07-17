@@ -1,16 +1,11 @@
-import React from 'react'
+
 import { useContext } from 'react'
 import { ProviderContext } from '../Provider/Provider';
 
-const GetProductByCategory = ({category}) => {
+const GetProductByCategory = (category) => {
     const { db } = useContext(ProviderContext);
-
+    return db.filter(el => el.category === category)
     
-  return (
-    <div>
-      
-    </div>
-  )
 }
 
 export default GetProductByCategory

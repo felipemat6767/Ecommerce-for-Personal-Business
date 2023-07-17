@@ -5,56 +5,63 @@
         "name": "Product 1",
         "type": "Ring",
         "price": 29.99,
-        "quantity": 0,
-        "img_name": "Rings1"
+        "quantity": 1,
+        "img_name": "Rings1",
+        "category":"Men"
       },
       {
         "id": 2,
         "name": "Product 2",
         "type": "Ring",
         "price": 49.99,
-        "quantity": 0,
-        "img_name": "Rings2"
+        "quantity": 1,
+        "img_name": "Rings2",
+        "category":"Men"
       },
       {
         "id": 3,
         "name": "Product 3",
         "type": "Necklace",
         "price": 39.99,
-        "quantity": 0,
-        "img_name": "Necklace3"
+        "quantity": 1,
+        "img_name": "Necklace3",
+        "category": "Men"
       },
       {
         "id": 4,
         "name": "Product 4",
         "type": "Heart Ring",
         "price": 19.99,
-        "quantity": 0,
-        "img_name": "Rings3"
+        "quantity": 1,
+        "img_name": "Rings3",
+        "category":"Men"
       },
       {
         "id": 5,
         "name": "Product 5",
         "type": "Bracelet",
         "price": 49.99,
-        "quantity": 0,
-        "img_name": "Bracelet1"
+        "quantity": 1,
+        "img_name": "Bracelet1",
+        "category":"Men"
       },
       {
         "id": 6,
         "name": "Product 6",
         "type": "Ring",
         "price": 49.99,
-        "quantity": 0,
-        "img_name": "Rings4"
+        "quantity": 1,
+        "img_name": "Rings4",
+        "category":"Women"
       },
       {
         "id": 7,
         "name": "Product 7",
         "type": "Bracelet",
         "price": 49.99,
-        "quantity": 0,
-        "img_name": "Bracelet2"
+        "quantity": 1,
+        "img_name": "Bracelet2",
+        "category":"Women"
       }
       ,
       {
@@ -62,40 +69,45 @@
         "name": "Product 8",
         "type": "Ring",
         "price": 49.99,
-        "quantity": 0,
-        "img_name": "Rings7"
+        "quantity": 1,
+        "img_name": "Rings7",
+        "category":"Women"
       },
       {
         "id": 9,
         "name": "Product 9",
         "type": "Gold + Spinner Ring ",
         "price": 49.99,
-        "quantity": 0,
-        "img_name": "Rings5"
+        "quantity": 1,
+        "img_name": "Rings5",
+        "category":"Women"
       },
       {
         "id": 10,
         "name": "Product 10",
         "type": "Necklace",
         "price": 49.99,
-        "quantity": 0,
-        "img_name": "Necklace1"
+        "quantity": 1,
+        "img_name": "Necklace1",
+        "category":"Women"
       },
       {
         "id": 11,
         "name": "Product 11",
         "type": "Necklace",
         "price": 49.99,
-        "quantity": 0,
-        "img_name": "Necklace2"
+        "quantity": 1,
+        "img_name": "Necklace2",
+        "category":"Men"
       },
       {
         "id": 12,
         "name": "Product 12",
         "type": "Ring",
         "price": 59.99,
-        "quantity": 0,
-        "img_name": "Rings8"
+        "quantity": 1,
+        "img_name": "Rings8",
+        "category":"Women"
       }
 
     ]

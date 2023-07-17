@@ -1,10 +1,11 @@
 import React from 'react'
 import { createContext, useEffect, useState } from 'react'
 import { helpHttp } from '../helpers/helpHttp'
+import GetProductByCategory from '../helpers/GetProductByCategory'
 
 export const ProviderContext = createContext()
 const Provider = (props) => {
-  const [db, setDb] = useState(null)
+  const [db, setDb] = useState()
   let url = "http://localhost:4000/productos"
 
   useEffect(() => {
@@ -31,22 +32,22 @@ const Provider = (props) => {
   const UpdateShoppingCart = (action, product) => {
     const itExists = shoppingCart.find((item) =>
       item.name === product.name &&
-      item.color === product.color &&
-      item.size === product.size
+        item.color === product.color &&
+        item.size === product.size
         ? true
         : false
     )
     if (action === 'add') {
       itExists
         ? setShoppingCart(
-            shoppingCart.map((item) =>
-              item.name === product.name &&
+          shoppingCart.map((item) =>
+            item.name === product.name &&
               item.color === product.color &&
               item.size === product.size
-                ? { ...item, quantity: item.quantity + 1 }
-                : item
-            )
+              ? { ...item, quantity: item.quantity + 1 }
+              : item
           )
+        )
         : setShoppingCart([...shoppingCart, product])
     }
     if (action === 'remove' && itExists) {
@@ -54,8 +55,8 @@ const Provider = (props) => {
         setShoppingCart(
           shoppingCart.map((item) =>
             item.name === product.name &&
-            item.color === product.color &&
-            item.size === product.size
+              item.color === product.color &&
+              item.size === product.size
               ? { ...item, quantity: item.quantity - 1 }
               : item
           )
@@ -68,6 +69,21 @@ const Provider = (props) => {
       setShoppingCart(shoppingCart.filter((item) => item !== itExists))
     }
   }
+  const [category, setCategory] = useState("")
+  const CategoryFilter = ({ category }) => {
+    switch (category) {
+      case "Men":
+        <GetProductByCategory category={"Men"}></GetProductByCategory>
+        break;
+      case "Women":
+        <GetProductByCategory category={"Women"}></GetProductByCategory>
+        break;
+      default:
+        break;
+    }
+  }
+
+ 
   return (
     <ProviderContext.Provider
       value={{
@@ -76,6 +92,8 @@ const Provider = (props) => {
         UpdateShoppingCart,
         shoppingCart,
         setShoppingCart,
+        setCategory,
+        category
       }}>
       {props.children}
     </ProviderContext.Provider>

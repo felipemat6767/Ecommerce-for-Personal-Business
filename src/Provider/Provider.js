@@ -70,13 +70,14 @@ const Provider = (props) => {
     }
   }
   const [category, setCategory] = useState("")
+  const [filter, setfilter] = useState(false)
   const CategoryFilter = ({ category }) => {
     switch (category) {
       case "Men":
-        <GetProductByCategory category={"Men"}></GetProductByCategory>
+        
         break;
       case "Women":
-        <GetProductByCategory category={"Women"}></GetProductByCategory>
+    
         break;
       default:
         break;

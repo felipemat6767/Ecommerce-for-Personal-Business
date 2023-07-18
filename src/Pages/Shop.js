@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import { ProviderContext } from '../Provider/Provider';
 import Producto from '../components/Producto';
 import Sidebar from '../components/Sidebar';
-import GetProductByCategory from '../helpers/GetProductByCategory';
 import ProductFilt from '../filters/ProductFilt';
 
 
@@ -23,7 +22,6 @@ const Shop = () => {
         }
       
       <ProductFilt category={category}></ProductFilt>
-  
       </div>
     </div>
 

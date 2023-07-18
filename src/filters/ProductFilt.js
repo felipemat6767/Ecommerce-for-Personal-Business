@@ -1,18 +1,25 @@
 import React from 'react'
 import GetProductByCategory from '../helpers/GetProductByCategory'
 import Producto from '../components/Producto'
+import { useState } from 'react'
+import { faL } from '@fortawesome/free-solid-svg-icons'
 
 const ProductFilt = ({ category }) => {
     const ProdbyCategory = GetProductByCategory(category)
-    console.log(ProdbyCategory)
+    const [filter, setfilter] = useState(true)
+
+    if (category !== "All") setfilter(false)
+
     return (
-        <>
-            <div className='row rows-cols-1 row-cols-md-3 g-3'>
+        <div>
+            <div>
                 {ProdbyCategory.map(el => (
-                    <Producto el={el} key={el.key} />
+                    <article className='Producto'>
+                        <Producto el={el} key={el.key} />
+                    </article>
                 ))}
             </div>
-        </>
+        </div>
     )
 }
 

@@ -7,7 +7,7 @@ const Sidebar = () => {
     <>
       <ul className='Sidebar'>
         <li>Browse</li>
-        <li onClick={() => {setCategory("All")}}>All</li>
+        <li onClick={() => {setCategory("")}}>All</li>
         <li onClick={() => {setCategory("Men")}}>Men</li>
         <li onClick={() => {setCategory("Women")}}>Women</li>
         <li onClick={() => {setCategory("Jewe")}}>.925 Jewelry</li>

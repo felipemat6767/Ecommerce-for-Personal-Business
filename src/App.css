@@ -49,15 +49,16 @@ body {
 
 .submenu-wrap {
   position: absolute;
-  top: 45%;
+  top: 52%;
   right: 10%;
+  width: 300px;
   overflow: hidden;
   max-height: 0px;
   transition: max-height 0.5s;
 }
 
 .submenu-wrap.open-menu {
-  max-height: 500px;
+  max-height: 600px;
 }
 
 .sub-menu {

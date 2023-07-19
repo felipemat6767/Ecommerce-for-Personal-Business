@@ -1,27 +1,19 @@
 import React, { useContext } from 'react'
 import { ProviderContext } from '../Provider/Provider';
-import Producto from '../components/Producto';
 import Sidebar from '../components/Sidebar';
 import ProductFilt from '../filters/ProductFilt';
+import ProductAll from '../filters/ProductAll';
 
 
 const Shop = () => {
-  const { db, category } = useContext(ProviderContext);
- 
-  
+  const { category } = useContext(ProviderContext);
+
+
   return (
     <div className='Contenedor-Shop'>
       <Sidebar></Sidebar>
       <div className='Contenedor-Productos'>
-        {db.map((el) => (
-          <article className='Producto'>
-            <Producto el={el} key={el.key}
-            ></Producto>
-          </article>
-        ))
-        }
-      
-      <ProductFilt category={category}></ProductFilt>
+        {(category !== "") ? <ProductFilt category={category}></ProductFilt> : <ProductAll></ProductAll>  }
       </div>
     </div>
 

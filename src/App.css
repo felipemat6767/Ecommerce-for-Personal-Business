@@ -166,7 +166,7 @@ body {
 
 /*Sidebar*/
 
-.Sidebar{
+.Sidebar {
   list-style: none;
   align-items: center;
   display: flex;
@@ -175,10 +175,11 @@ body {
   margin-right: 20px;
 }
 
-.Sidebar li{
+.Sidebar li {
   padding-bottom: 10px;
   cursor: pointer;
 }
+
 /*Modal*/
 .modal {
   position: fixed;
@@ -259,4 +260,27 @@ body {
 
 .item-info-segment span {
   padding: auto 20px;
+}
+
+/*Pictures*/
+.Picture-Intro {
+  display: flex;
+}
+
+.Picture-Portrait {
+  height: 100%;
+}
+
+.Picture-Portrait img {
+  width: 700px;
+  height: 100%;
+  z-index: 0;
+}
+
+.Picture-Intro {
+  background-color: #fff;
+  height: 80%;
+  align-items: center;
+  margin-left: -80px;
+  z-index: 1;
 }

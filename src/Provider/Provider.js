@@ -22,12 +22,19 @@ const Provider = (props) => {
 
   // Shopping Cart Section
 
-  const [isProductInCart, setIsProductInCart] = useState(null)
+
 
   const [shoppingCart, setShoppingCart] = useState([])
 
   const agregaritem = (data) => {
-    setShoppingCart([...shoppingCart, data])
+    const dataexists = shoppingCart.find((item) =>
+      item.id === data.id ? true : false
+    )
+
+    if (dataexists) {
+      alert("Product already in")
+    } else { setShoppingCart([...shoppingCart, data]) }
+
   }
   const UpdateShoppingCart = (action, product) => {
     const itExists = shoppingCart.find((item) =>
@@ -70,7 +77,7 @@ const Provider = (props) => {
     }
   }
   const [category, setCategory] = useState("")
- 
+
   return (
     <ProviderContext.Provider
       value={{

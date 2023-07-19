@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Shop from './Pages/Shop';
 import Provider from './Provider/Provider';
 import ProdPage from './Pages/ProdPage';
+import Pictures from './Pages/Pictures';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
           <Routes>
             <Route element={<FrontPage />} path='/' />
             <Route element={<Shop />} path='/Shop' />
-            <Route element={<ProdPage />} path='/ProdPage' />
+            <Route element={<ProdPage />} path='/ProdPage'/>
+            <Route element={<Pictures />} path='/Pictures'/>
           </Routes>
         </Provider>
       </Router>

@@ -19,11 +19,11 @@ const Navbar = () => {
                 <NavLink to="/">Home</NavLink>
                 <NavLink >About</NavLink>
                 <NavLink to="/Shop">Shop</NavLink>
-                <NavLink >Pictures</NavLink>
+                <NavLink to="/Pictures">Pictures</NavLink>
                 <NavLink >More ...</NavLink>
             </div>
-            <span><FontAwesomeIcon icon={faCartShopping} /></span>
-           <FontAwesomeIcon icon={faHeart} onClick={openMenu} className='navIcons'/>
+            <span><FontAwesomeIcon icon={faHeart} /></span>
+           <FontAwesomeIcon icon={faCartShopping} onClick={openMenu} className='navIcons'/>
             <div className={`submenu-wrap ${active ? "submenu-wrap open-menu" : ""}`}>
                 <div className='sub-menu'>
                     <ShoppingCartSection></ShoppingCartSection>

@@ -1,0 +1,22 @@
+{
+    "slides": [
+{
+    "alt":"Carousel-Photo1",
+    "src": "Portrait-Images/Carousel1_Photo1.jpg" 
+
+},
+{
+    "alt":"Carousel-Photo2",
+    "src": "Portrait-Images/Carousel1_Photo2.jpg" 
+
+},
+{
+    "alt":"Carousel-Photo3",
+    "src": "Portrait-Images/Carousel1_Photo3.jpg" 
+
+}
+
+    ]
+
+
+}

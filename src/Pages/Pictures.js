@@ -51,6 +51,8 @@ const Pictures = () => {
                         </div>)}
                 </div>
             </div>
+
+            <div className='Carousel-SecondVersion' ></div>
         </>
     )
 }

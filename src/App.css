@@ -309,3 +309,21 @@ body {
 .clicked{
   border: 5px solid black;
 }
+
+/*Segunda Version Carousel*/
+
+.containerStyles{
+  width: 500px;
+  margin: 0 auto;
+  height: 350px;
+}
+.SliderStyles{
+ height: 100%;
+ position: relative;
+}
+
+.SlideStyles{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}

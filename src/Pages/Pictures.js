@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import SegundaVersCarousel from '../components/SegundaVersCarousel'
 
 const images = [
     { id: 0, value: "Portrait-Images/Carousel1_Photo1.jpg" },
@@ -52,7 +53,9 @@ const Pictures = () => {
                 </div>
             </div>
 
-            <div className='Carousel-SecondVersion' ></div>
+            <div>
+                <SegundaVersCarousel></SegundaVersCarousel>
+            </div>
         </>
     )
 }

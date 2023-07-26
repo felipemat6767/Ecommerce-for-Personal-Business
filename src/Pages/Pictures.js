@@ -8,7 +8,6 @@ const images = [
     { id: 3, value: "Portrait-Images/Carousel1_Photo4.jpg" }
 ]
 
-
 const Pictures = () => {
     const [sliderData, setSliderData] = useState(images[0])
     const handleClick = (index) => {
@@ -48,14 +47,15 @@ const Pictures = () => {
                 <div className='Carousel-Pictures'>
                     {images.map((data, i) =>
                         <div className='thumbnail'>
-                            <img src={data.value} onClick={() => { handleClick(i) }} key={i} alt="Carousel" height="70" width="100" className={sliderData.id===i?"clicked":""}></img>
-                        </div>)}
+                            <img src={data.value} onClick={() => { handleClick(i) }} key={i} alt="Carousel" height="70" width="100" className={sliderData.id === i ? "clicked" : ""}></img>
+                        </div>)
+                    }
                 </div>
             </div>
 
-            <div>
-                <SegundaVersCarousel></SegundaVersCarousel>
-            </div>
+
+          <SegundaVersCarousel />
+
         </>
     )
 }

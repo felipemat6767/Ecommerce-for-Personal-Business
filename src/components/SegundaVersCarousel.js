@@ -1,19 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ImageSlider from './ImageSlider'
-const images = [
-  { url: "http://localhost:3000/image-1.jpg", title: "beach" },
-    { url: "http://localhost:3000/image-2.jpg", title: "boat" },
-    { url: "http://localhost:3000/image-3.jpg", title: "forest" },
-    { url: "http://localhost:3000/image-4.jpg", title: "city" },
-    { url: "http://localhost:3000/image-5.jpg", title: "italy" },
+const imag = [
+  { id: 0, value: "Portrait-Images/Carousel1_Photo1.jpg" },
+  { id: 1, value: "Portrait-Images/Carousel1_Photo2.jpg" },
+  { id: 2, value: "Portrait-Images/Carousel1_Photo3.jpg" },
+  { id: 3, value: "Portrait-Images/Carousel1_Photo4.jpg" }
 ]
 
-console.log(images)
 
 const SegundaVersCarousel = () => {
   return (
     <div className='containerStyles'>
-        <ImageSlider slides={images}></ImageSlider>
+      <ImageSlider slides={imag}></ImageSlider>
     </div>
   )
 }

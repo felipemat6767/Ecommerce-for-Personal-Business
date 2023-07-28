@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import { NavLink } from "react-router-dom";
+import { NavLink, Navigate } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -9,9 +9,14 @@ import GetSearchElem from '../helpers/getSearchElem';
 
 const Navbar = () => {
     const [active, setActive] = useState(false)
-    const { shoppingCart } = useContext(ProviderContext);
+    const { shoppingCart, searchElem } = useContext(ProviderContext);
     const openMenu = () => {
         setActive(!active)
+    }
+
+    const SentSearchElem = () => {
+        console.log("Hello");
+       <Navigate to ="/SearchedElem"></Navigate>
     }
     return (
         <nav className='NavLinks'>
@@ -27,7 +32,8 @@ const Navbar = () => {
             </div>
             <span>
                 <GetSearchElem />
-                <FontAwesomeIcon icon={faSearch} />
+                <FontAwesomeIcon icon={faSearch} 
+                onClick={SentSearchElem}/>
             </span>
             <FontAwesomeIcon icon={faCartShopping} onClick={openMenu} className='navIcons' />
             <span className='LengthCart'>{shoppingCart.length}</span>

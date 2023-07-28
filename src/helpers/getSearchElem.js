@@ -9,8 +9,6 @@ const GetSearchElem = () => {
         setSearchElem(valueSearch)
     }
 
-
-
     return (
         <>
             <input onChange={handleChange} ></input>

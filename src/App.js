@@ -6,6 +6,7 @@ import Shop from './Pages/Shop';
 import Provider from './Provider/Provider';
 import ProdPage from './Pages/ProdPage';
 import Pictures from './Pages/Pictures';
+import SearchedElem from './Pages/SearchedElem';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route element={<Shop />} path='/Shop' />
             <Route element={<ProdPage />} path='/ProdPage'/>
             <Route element={<Pictures />} path='/Pictures'/>
+            <Route element={<SearchedElem />} path='/SearchedElem'/>
           </Routes>
         </Provider>
       </Router>

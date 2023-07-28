@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { ProviderContext } from '../Provider/Provider';
 
 
 const GetSearchElem = () => {
+    const { searchElem, setSearchElem } = useContext(ProviderContext);
     const handleChange = (e) => {
         const valueSearch = e.target.value
-        setValue(valueSearch)
+        setSearchElem(valueSearch)
     }
-    const [first, setValue] = useState("")
 
-    
+
+
     return (
         <>
             <input onChange={handleChange} ></input>

@@ -13,10 +13,9 @@ const Navbar = () => {
     const openMenu = () => {
         setActive(!active)
     }
-
+    console.log(searchElem)
     const SentSearchElem = () => {
-        console.log("Hello");
-       <Navigate to ="/SearchedElem"></Navigate>
+       
     }
     return (
         <nav className='NavLinks'>
@@ -29,12 +28,10 @@ const Navbar = () => {
                 <NavLink to="/Shop">Shop</NavLink>
                 <NavLink to="/Pictures">Pictures</NavLink>
                 <NavLink >More ...</NavLink>
-            </div>
-            <span>
                 <GetSearchElem />
-                <FontAwesomeIcon icon={faSearch} 
-                onClick={SentSearchElem}/>
-            </span>
+                <a href = "/SearchedElem" onClick={SentSearchElem}><FontAwesomeIcon icon={faSearch}/></a>
+            </div>
+         
             <FontAwesomeIcon icon={faCartShopping} onClick={openMenu} className='navIcons' />
             <span className='LengthCart'>{shoppingCart.length}</span>
             <div className={`submenu-wrap ${active ? "submenu-wrap open-menu" : ""}`}>

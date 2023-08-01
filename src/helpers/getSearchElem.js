@@ -3,7 +3,7 @@ import { ProviderContext } from '../Provider/Provider';
 
 
 const GetSearchElem = () => {
-    const { searchElem, setSearchElem } = useContext(ProviderContext);
+    const { setSearchElem } = useContext(ProviderContext);
     const handleChange = (e) => {
         const valueSearch = e.target.value
         setSearchElem(valueSearch)

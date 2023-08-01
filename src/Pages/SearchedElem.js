@@ -5,8 +5,7 @@ const SearchedElem = () => {
     return (
         <div>
             {db && (
-                db.filter((item) => item.name = searchElem
-                )
+                db.filter(item => item.name === searchElem)
             )}
         </div>
     )

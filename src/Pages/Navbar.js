@@ -13,7 +13,6 @@ const Navbar = () => {
     const openMenu = () => {
         setActive(!active)
     }
-    console.log(searchElem)
     const SentSearchElem = () => {
        
     }

@@ -78,6 +78,8 @@ const Provider = (props) => {
   }
   const [category, setCategory] = useState("")
   const [searchElem, setSearchElem] = useState("")
+
+
   return (
     <ProviderContext.Provider
       value={{

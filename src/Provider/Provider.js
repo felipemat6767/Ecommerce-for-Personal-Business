@@ -1,7 +1,6 @@
 import React from 'react'
 import { createContext, useEffect, useState } from 'react'
 import { helpHttp } from '../helpers/helpHttp'
-import GetProductByCategory from '../helpers/GetProductByCategory'
 
 export const ProviderContext = createContext()
 const Provider = (props) => {

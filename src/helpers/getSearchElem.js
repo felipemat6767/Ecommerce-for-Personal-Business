@@ -1,32 +1,34 @@
-import React, { useContext, useState } from 'react'
-import { ProviderContext } from '../Provider/Provider';
-import { useLocation, useNavigate } from 'react-router-dom'
+import React from 'react'
+import { createSearchParams, useLocation, useNavigate } from 'react-router-dom'
 import queryString from "query-string"
 import useForm from '../hooks/useForm';
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Producto from '../components/Producto';
+import SearchedElem from '../Pages/SearchElem';
 
+const useNavigateSearch = () => {
+    const navigate = useNavigate();
+    return (pathname, params) =>
+        navigate({ pathname, search: `?${createSearchParams(params)}` });
+};
 const GetSearchElem = () => {
-    const { setSearchElem } = useContext(ProviderContext);
-    const navigate = useNavigate()
-    const location = useLocation()
 
+    const location = useLocation()
+    const navigateSearch = useNavigateSearch();
     const { q = "" } = queryString.parse(location.search)
     const [formvalues, handleinputchange] = useForm({
         searchText: q
     })
-
+    
     const { searchText } = formvalues
-    const productsFiltered = setSearchElem(q)
-
+    const productsFiltered = SearchedElem(q)
+    console.log(searchText)
     const handlesearch = (e) => {
         e.preventDefault()
-        navigate(`?q=${searchText}`)
+        navigateSearch('/ProdSearched', { searchText });
     }
-
     console.log(productsFiltered)
-    console.log(searchText)
     return (
         <>
             <form onSubmit={handlesearch}>
@@ -42,7 +44,6 @@ const GetSearchElem = () => {
                 <button type="submit"><FontAwesomeIcon icon={faSearch} /></button>
             </form>
 
-           
         </>
     )
 }

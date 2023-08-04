@@ -3,7 +3,6 @@ import ProdPage from '../Pages/ProdPage'
 import { useModal } from '../helpers/useModal';
 import Modal from './Modals';
 import { ProviderContext } from '../Provider/Provider';
-
 const Producto = ({ el }) => {
     const [isOpen, openModal, closeModal] = useModal(false);
     const { name, type, price, quantity, img_name } = el

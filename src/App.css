@@ -391,3 +391,19 @@ body {
   background-size: cover;
   background-position: center
 }
+
+
+/*Prod-Searched*/
+.Contenedor-Search{
+  width: 80%;
+  margin: 0 auto;
+}
+
+.Contenedor-Search h4{
+  text-align: center;
+}
+.Contenedor-Productos-Searched {
+display: flex;
+justify-content: center;
+text-align: center;
+}

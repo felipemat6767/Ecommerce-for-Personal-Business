@@ -4,7 +4,6 @@ import queryString from "query-string"
 import useForm from '../hooks/useForm';
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Producto from '../components/Producto';
 import SearchedElem from '../Pages/SearchElem';
 
 const useNavigateSearch = () => {
@@ -13,7 +12,6 @@ const useNavigateSearch = () => {
         navigate({ pathname, search: `?${createSearchParams(params)}` });
 };
 const GetSearchElem = () => {
-
     const location = useLocation()
     const navigateSearch = useNavigateSearch();
     const { q = "" } = queryString.parse(location.search)

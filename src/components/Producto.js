@@ -5,7 +5,7 @@ import Modal from './Modals';
 import { ProviderContext } from '../Provider/Provider';
 const Producto = ({ el }) => {
     const [isOpen, openModal, closeModal] = useModal(false);
-    const { name, type, price, quantity, img_name } = el
+    const { name, type, price, img_name } = el
     const { agregaritem } = useContext(ProviderContext);
     const addtoshop = () => {
         agregaritem(el)

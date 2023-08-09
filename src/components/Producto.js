@@ -10,7 +10,7 @@ const Producto = ({ el }) => {
     const addtoshop = () => {
         agregaritem(el)
     }
-   
+
     return (
         <div className=''>
             <article className='Prod-Img'>
@@ -22,14 +22,16 @@ const Producto = ({ el }) => {
                 <h3>{price}</h3>
             </article>
 
-            <button onClick={openModal} >Abrir Modal</button>
-            <button onClick={addtoshop}>ADD</button>
+            <div className='Btn-Container'>
+                <button onClick={openModal} className='Prod-btn' >Info</button>
+                <button onClick={addtoshop}>+</button>
+            </div>
             <Modal isOpen={isOpen} closeModal={closeModal}>
                 <ProdPage el={el}></ProdPage>
             </Modal>
         </div>
 
-        
+
     )
 }
 

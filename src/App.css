@@ -54,7 +54,6 @@ body {
   text-align: center;
   display: inline-block;
 }
-/*Navbar SearchBar*/
 
 
 /*Navbar-DropLink*/
@@ -175,7 +174,22 @@ body {
   background-color: #ccc;
   margin: 15px 0 10px;
 }
+.Btn-Container{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+.Prod-btn{
+background-color: #bbb;
+border: 1px solid white;
+color: rgb(30, 29, 29);
+transition: background-color 1.0s ease, color 1.0s ease;
+}
 
+.Prod-btn:hover{
+  background-color: #7e7070;
+  color: white;
+}
 /*Sidebar*/
 
 .Sidebar {
@@ -231,6 +245,7 @@ body {
 .ShoppingCart {
   width: 100%;
   height: 100%;
+  z-index:1 !important;
 }
 
 .ShoppingCart h4 {
@@ -277,6 +292,7 @@ body {
 /*Pictures*/
 .Picture-Intro {
   display: flex;
+  z-index: 0;
 }
 
 .Picture-Portrait {
@@ -288,7 +304,7 @@ body {
 .Picture-Portrait img {
   width: 700px;
   height: 100vh;
-  z-index: 0;
+ 
 }
 
 .Picture-Info {
@@ -296,7 +312,7 @@ body {
   align-items: center;
   margin-top: 100px;
   margin: 60px 0px 60px -120px;
-  z-index: 1;
+  
   padding: 20px;
 }
 
@@ -328,7 +344,7 @@ body {
 .containerStyles{
   width: 500px;
     height: 280px;
-    margin: 0 auto;
+    
 }
 .containerS {
   width: 100%;

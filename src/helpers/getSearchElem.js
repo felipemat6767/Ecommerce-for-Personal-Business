@@ -21,7 +21,6 @@ const GetSearchElem = () => {
     
     const { searchText } = formvalues
     const productsFiltered = SearchedElem(q)
-    console.log(searchText)
     const handlesearch = (e) => {
         e.preventDefault()
         navigateSearch('/ProdSearched', { searchText });

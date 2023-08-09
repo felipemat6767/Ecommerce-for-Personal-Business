@@ -10,10 +10,10 @@ const ProdSearched = () => {
   const query = useQuery()
   const elementSearched = query.get("searchText")
   const productsFiltered = SearchedElem(elementSearched)
-  console.log(elementSearched)
+  
   return (
     <div className='Contenedor-Search'>
-     <h4>Productos Filtrados</h4>
+     <h4>{`Restultados para: ${elementSearched}`}</h4>
       <div className='Contenedor-Productos-Searched'>
         {(elementSearched === '')
           ? <div className="">No se ingreso ningun elemento de busqueda</div>

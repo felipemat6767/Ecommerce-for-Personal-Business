@@ -11,6 +11,8 @@ const imag = [
 const SegundaVersCarousel = () => {
   return (
     <div className='containerStyles'>
+      <h2>PhotoShoot Title</h2>
+      <p>Location of Picture</p>
       <ImageSlider slides={imag}></ImageSlider>
     </div>
   )

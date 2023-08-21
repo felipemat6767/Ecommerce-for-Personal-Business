@@ -224,9 +224,9 @@ transition: background-color 1.0s ease, color 1.0s ease;
   position: relative;
   padding: 1rem;
   min-width: 320px;
-  max-width: 480px;
+  max-width: 510px;
   min-height: 200px;
-  max-height: 600px;
+  max-height: 800px;
   overflow-y: auto;
   background-color: #fff;
 }
@@ -244,6 +244,25 @@ transition: background-color 1.0s ease, color 1.0s ease;
 .Prod-Imag{
   width: 600px;
 }
+
+.Modal-Pictures{
+  display: flex;
+
+}
+
+.Modal-Vertical-Pictures-Cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right:10px ;
+}
+.Modal-Vertical-Pictures img {
+margin-bottom: 10px;
+}
+.Modal-Big-Picture {
+  margin-bottom: 10px;
+  }
+
 /*Item Cart*/
 .ShoppingCart {
   width: 100%;

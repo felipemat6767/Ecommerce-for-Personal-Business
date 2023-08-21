@@ -241,6 +241,9 @@ transition: background-color 1.0s ease, color 1.0s ease;
   display: flex;
 }
 
+.Prod-Imag{
+  width: 600px;
+}
 /*Item Cart*/
 .ShoppingCart {
   width: 100%;

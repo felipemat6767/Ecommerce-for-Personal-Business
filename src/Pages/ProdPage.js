@@ -1,10 +1,35 @@
+import { useState } from "react"
+
 
 const ProdPage = ({el}) => {
-    const { name, type, price, quantity, img_name } = el
+    const { name, type, price, quantity, img_name, id } = el
+
+    const imag = [
+        { id: 1, value:`Images/Image-${id}/Image-${id}a.jpg` },
+        { id: 2, value:`Images/Image-${id}/Image-${id}b.jpg` },
+        { id: 3, value:`Images/Image-${id}/Image-${id}c.jpg` },
+        { id: 4, value:`Images/Image-${id}/Image-${id}d.jpg` }
+      ]
+      
+      const [sliderData, setSliderData] = useState(imag[0])
+      
+      const handleClick = (index) => {
+        const slider = imag[index]
+        setSliderData(slider)
+    }
     return (
         <article>
             <div className='modalBackground'>
                 <div className="modalContainer">
+                <div className='Carousel-Pictures'>
+                    <img src= {sliderData.value} alt='SliderData-Value' height="300" width="500"></img>
+                    {imag.map((data, i) =>
+                        <div className='thumbnail'>
+                            <img src={data.value}  key={i} onClick={() => { handleClick(i) }}
+                            alt="Carousel" height="70" width="100" ></img>
+                        </div>)
+                    }
+                </div>
                     <h2>{name}</h2>
                     <p>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim amet quibusdam necessitatibus quia magni nam

@@ -16,7 +16,7 @@ const Producto = ({ el }) => {
             <article className='Prod-Img'>
                 <img src={`../Images/ImagesProd/${img_name}.jpeg`} alt=''></img>
             </article>
-            <article>
+            <article className='Prod-carac'>
                 <h3>{name}</h3>
                 <h3>{type}</h3>
                 <h3>{price}</h3>

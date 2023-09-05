@@ -1,5 +1,6 @@
 body {
-  background-color: rgb(247, 245, 220);
+  background-color: 
+  #00ABE4
 }
 
 /*HomePage*/
@@ -144,21 +145,27 @@ body {
 }
 
 .Producto {
-  background-color: rgb(234, 233, 208);
+  background-color: #E1B0AC;
   flex-grow: 1;
   flex-basis: calc(25% - 0px);
   margin: 10px;
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
   width: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: 'Courier New', Courier, monospace;
+  letter-spacing: 0.8px;
+ 
 }
 
-
+.Prod-carac h3{
+  padding: 5px;
+  text-align: center;
+  align-items: center;
+  border-bottom: 1px solid white;
+}
 .Prod-Img img {
   width: 100%;
   height: 200px;
-
 }
 
 .Prod-Button {
@@ -199,7 +206,7 @@ transition: background-color 1.0s ease, color 1.0s ease;
   flex-direction: column;
   text-align: center;
   margin-right: 20px;
-  width: 25%;
+  width: 10%;
 }
 
 .Sidebar li {
@@ -211,24 +218,29 @@ transition: background-color 1.0s ease, color 1.0s ease;
 }
 .range{
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: start;
+  width: 100%;
+  padding: 10px;
+  margin-right: 20px;
+}
+.range-cont{
+  display: flex;
+  justify-content: space-around;
   width: 100%;
 }
 .range-input{
  display: flex;
- width: 100%;
- margin: 0 auto;
  align-items: center;
 }
 
 .range-input-cont input{
-  width: 40px;
-  padding: 4px;
+  width: 20px;
   margin: 10px;
 }
 .range-icon{
-  padding: 10px;
+  
 }
 /*Modal*/
 .modal {
@@ -464,4 +476,45 @@ margin-bottom: 10px;
 display: flex;
 justify-content: center;
 text-align: center;
+}
+
+/*Footer*/
+
+
+footer{
+  height: 40vh;
+  background-color: #310072;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  align-items: center;
+  overflow: hidden;
+}
+
+.info-contacto-footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+.info-contacto-footer a{
+  text-decoration: none;
+  font-weight: 600;
+  padding: 20px;
+  font-size: medium;
+  color: #bdb76b;
+
+}
+
+.info-uf-footer{
+  padding: 20px;
+  font-size: medium;
+  color: #bdb76b;
+}
+.line-footer{
+  border: 1px solid #3379e9;
+  margin-right: 17px;
+  height: 70%;
+  
 }

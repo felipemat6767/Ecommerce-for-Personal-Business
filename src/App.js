@@ -7,6 +7,7 @@ import Provider from './Provider/Provider';
 import ProdPage from './Pages/ProdPage';
 import Pictures from './Pages/Pictures';
 import ProdSearched from './Pages/ProdSearched';
+import Footer from './Pages/footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route element={<Pictures />} path='/Pictures'/>
             <Route element={<ProdSearched />} path='/ProdSearched'/>
           </Routes>
+          <Footer></Footer>
         </Provider>
       </Router>
     </div>

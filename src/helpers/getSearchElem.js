@@ -31,7 +31,7 @@ const GetSearchElem = () => {
             <form onSubmit={handlesearch}>
                 <input
                     type="text"
-                    placeholder='Buscar un Producto'
+                    placeholder='Name of product'
                     className='form-control'
                     name="searchText"
                     value={searchText}

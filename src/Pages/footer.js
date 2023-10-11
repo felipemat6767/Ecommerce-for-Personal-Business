@@ -15,7 +15,7 @@ const Footer = () => {
         <span class="line-footer"></span>
         <span class="info-uf-footer">
             <p>Valor UF: 36,989</p>
-            <p>Valor UF: 36,989</p>
+            <p>Valor Servicio: 1</p>
         </span>
         <span class="line-footer"></span>
         <span>

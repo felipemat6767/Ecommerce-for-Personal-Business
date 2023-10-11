@@ -2,18 +2,18 @@ import React from 'react'
 
 const FrontPage = () => {
   return (
-    <>
-      <div className='FirstSection'>
-        <div className='IntroSection'>
-          <p>Greatness from small Beginnings</p>
-          <button>Go to Shop</button>
+    <div className='contenedorSlider'>
+      <div className='outer'>
+        <div className='details'>
+            <h1>Titulo FrontPage con imagenes</h1>
+            <h2>
+              <span>Subtitulo de FrontPage</span>
+              <span>Visite nuestra tienda</span>
+            </h2>
         </div>
-        <div className='ImgIntroSection'>
-          <img src={"Images/Portrait.jpg"} alt='Portrait'></img>
-        </div>
-      </div> 
-      
-    </>
+      </div>
+
+    </div>
   )
 }
 

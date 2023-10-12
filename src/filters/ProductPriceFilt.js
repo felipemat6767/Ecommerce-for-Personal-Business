@@ -1,12 +1,14 @@
 import React, {useContext} from 'react'
-import GetProductByCategory from '../helpers/GetProductByCategory'
 import Producto from '../components/Producto'
 import { ProviderContext } from '../Provider/Provider';
-const ProductFilt = ({ category }) => {
+import GetProductByPrice from '../helpers/getProductByPrice';
+
+const ProductPriceFilt = () => {
     const { db } = useContext(ProviderContext);
-    const ProdbyCategory = GetProductByCategory(category)
+    const ProdByPrice= GetProductByPrice()
+    
     return (
-        db && (ProdbyCategory.map(el => (
+        db && (ProdByPrice.map(el => (
             <article className='Producto'>
                 <Producto el={el} key={el.key} />
             </article>
@@ -14,5 +16,4 @@ const ProductFilt = ({ category }) => {
     )
 }
 
-
-export default ProductFilt
+export default ProductPriceFilt

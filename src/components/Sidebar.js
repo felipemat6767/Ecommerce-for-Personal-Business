@@ -3,13 +3,33 @@ import { ProviderContext } from '../Provider/Provider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react";
-const Sidebar = () => {
-  const [view, setView] = useState(false);
-  const { setCategory } = useContext(ProviderContext);
+import useForm from '../hooks/useForm';
 
+const valoresiniciales = {
+  ValorMin: 0,
+  ValorMax: 0
+}
+
+const Sidebar = () => {
+  
+  const [view, setView] = useState(false);
+  const { setCategory, valinic, setvalinic} = useContext(ProviderContext);
+ 
+  const [valorinicial, setvalorinicial] = useState({valoresiniciales});
+  const handleValueChange = (e) => {
+    const{name, value} = e.target
+    setvalorinicial({...valorinicial, [name]: value})
+  }
+ 
   const setRange = () => {
     setView(!view)
   }
+
+  const valores = (e) => {
+      e.preventDefault()
+      setvalinic(valorinicial)
+  }
+
   return (
     <>
       <ul className='Sidebar'>
@@ -27,15 +47,21 @@ const Sidebar = () => {
           </div>
           {view &&
             <li>
-              <div className='range-input'>
-                <div className='range-input-cont'>
-                  <label>Min Price</label>
-                  <input></input>
+              <form onSubmit={valores}>
+                <div className='range-input'>
+                  <div className='range-input-cont'>
+                    <label>Min Price</label>
+                    <input name="ValorMin" value ={valorinicial.ValorMin} onChange={handleValueChange} onClick={() => { setCategory("Price") }}></input>
+                  </div>
+                  <div className='range-input-cont'>
+                    <label>Max Price</label>
+                    <input onChange={handleValueChange} value ={valorinicial.ValorMax} name="ValorMax" onClick={() => { setCategory("Price") }}></input>
+                  </div>
                 </div>
-                <div className='range-input-cont'>
-                  <label>Min Price</label>
-                  <input></input>
-                </div>
+                <button type='submit'>Filter</button>
+              </form>
+              <div>
+                  
               </div>
             </li>}
         </div>

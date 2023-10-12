@@ -209,7 +209,7 @@ transition: background-color 1.0s ease, color 1.0s ease;
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-right: 20px;
+  margin-right: 40px;
   width: 10%;
 }
 
@@ -218,7 +218,7 @@ transition: background-color 1.0s ease, color 1.0s ease;
   cursor: pointer;
   border-bottom: 2px solid black;
   width: 100%;
-  padding: 10px;
+  padding: 15px;
 }
 .range{
   display: flex;
@@ -233,15 +233,18 @@ transition: background-color 1.0s ease, color 1.0s ease;
   display: flex;
   justify-content: space-around;
   width: 100%;
+  margin-right: 20px;
 }
 .range-input{
  display: flex;
  align-items: center;
+
 }
 
 .range-input-cont input{
-  width: 20px;
+  width: 30px;
   margin: 10px;
+  height: 30px;
 }
 .range-icon{
   

@@ -24,7 +24,9 @@ const Provider = (props) => {
 
 
   const [shoppingCart, setShoppingCart] = useState([])
-
+  const [valorMin, setValorMin] = useState(0)
+  const [valorMax, setValorMax] = useState(0)
+  const [valinic, setvalinic] = useState({})
   const agregaritem = (data) => {
     const dataexists = shoppingCart.find((item) =>
       item.id === data.id ? true : false
@@ -90,7 +92,11 @@ const Provider = (props) => {
         setCategory,
         category,
         searchElem, 
-        setSearchElem
+        setSearchElem,
+        valorMin, 
+        setValorMin,
+        valorMax, 
+        setValorMax,valinic, setvalinic
       }}>
       {props.children}
     </ProviderContext.Provider>

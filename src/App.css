@@ -1,6 +1,6 @@
 body {
   background-color: 
-  #00ABE4
+  #7ecce7
 }
 *,
 *::after,
@@ -10,13 +10,36 @@ body {
 /*HomePage*/
 
 /*Navbar*/
-.NavLinks {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 10px;
-  position: relative;
+
+@media (min-width: 768px) {
+  .NavLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+    position: relative;
+  }
 }
+
+@media (max-width: 768px) {
+  .NavLinks {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+  }
+  .NavLinks span{
+    display: none;
+  }
+  .PageLinks{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+  }
+  .PageLinks *{
+    padding: 3px;
+  }
+}
+
 
 .PageLinks {
   width: 55%;
@@ -224,16 +247,18 @@ transition: background-color 1.0s ease, color 1.0s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   width: 100%;
-  padding: 10px;
-  margin-right: 20px;
+  
 }
 .range-cont{
   display: flex;
-  justify-content: space-around;
-  width: 100%;
-  margin-right: 20px;
+ justify-content: center;
+  margin-top: 10px;
+}
+.range-icon{
+  color: gray;
+  margin-left: 12px;
 }
 .range-input{
  display: flex;
@@ -243,11 +268,12 @@ transition: background-color 1.0s ease, color 1.0s ease;
 
 .range-input-cont input{
   width: 30px;
-  margin: 10px;
+  margin-bottom: 10px;
   height: 30px;
+
 }
-.range-icon{
-  
+.range-input-cont:nth-child(1){
+  margin-right: 20px;
 }
 /*Modal*/
 .modal {

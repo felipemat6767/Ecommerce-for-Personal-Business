@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
 import { ProviderContext } from '../Provider/Provider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faHandPointDown} from '@fortawesome/free-solid-svg-icons'
+import { faHandPointUp} from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react";
-import useForm from '../hooks/useForm';
+
 
 const valoresiniciales = {
   ValorMin: 0,
@@ -13,9 +14,10 @@ const valoresiniciales = {
 const Sidebar = () => {
   
   const [view, setView] = useState(false);
-  const { setCategory, valinic, setvalinic} = useContext(ProviderContext);
+  const { setCategory, setvalinic} = useContext(ProviderContext);
  
   const [valorinicial, setvalorinicial] = useState({valoresiniciales});
+
   const handleValueChange = (e) => {
     const{name, value} = e.target
     setvalorinicial({...valorinicial, [name]: value})
@@ -28,6 +30,7 @@ const Sidebar = () => {
   const valores = (e) => {
       e.preventDefault()
       setvalinic(valorinicial)
+      setCategory("Price")
   }
 
   return (
@@ -41,8 +44,8 @@ const Sidebar = () => {
         <div className='range'>
           <div className= 'range-cont'>
             <span>Range </span>
-            <div className='range-icon' >
-              <FontAwesomeIcon icon={faTrash} onClick={setRange} />
+            <div className='range-icon'>
+              {(!view)? <FontAwesomeIcon icon={faHandPointDown} onClick={setRange}/>: <FontAwesomeIcon icon={faHandPointUp} onClick={setRange}/>}
             </div>
           </div>
           {view &&
@@ -51,11 +54,11 @@ const Sidebar = () => {
                 <div className='range-input'>
                   <div className='range-input-cont'>
                     <label>Min Price</label>
-                    <input name="ValorMin" value ={valorinicial.ValorMin} onChange={handleValueChange} onClick={() => { setCategory("Price") }}></input>
+                    <input name="ValorMin" value ={valorinicial.ValorMin} onChange={handleValueChange}></input>
                   </div>
                   <div className='range-input-cont'>
                     <label>Max Price</label>
-                    <input onChange={handleValueChange} value ={valorinicial.ValorMax} name="ValorMax" onClick={() => { setCategory("Price") }}></input>
+                    <input onChange={handleValueChange} value ={valorinicial.ValorMax} name="ValorMax" ></input>
                   </div>
                 </div>
                 <button type='submit'>Filter</button>

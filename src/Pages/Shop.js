@@ -20,7 +20,7 @@ const Shop = () => {
     <div className='Contenedor-Shop'>
       <Sidebar></Sidebar>
       <div className='Contenedor-Productos'>
-      {(ValorMin > 0 && category === "Price") ? <ProductPriceFilt></ProductPriceFilt>: (category !== "") ? <ProductFilt category={category}></ProductFilt> : <ProductAll></ProductAll>  }
+      {(ValorMin > 0 && category === "Price" && ValorMax > ValorMin) ? <ProductPriceFilt></ProductPriceFilt>: (category !== "") ? <ProductFilt category={category}></ProductFilt> : <ProductAll></ProductAll>}
       </div>
     </div>
 

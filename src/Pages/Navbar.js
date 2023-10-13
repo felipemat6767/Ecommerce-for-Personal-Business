@@ -19,13 +19,12 @@ const Navbar = () => {
                 <img src={"Images/Logo.png"} alt="Logo"></img>
             </span>
             <div className='PageLinks'>
-                <NavLink to="/">Home</NavLink>
-                <NavLink >About</NavLink>
-                <NavLink to="/Shop">Shop</NavLink>
-                <NavLink to="/Pictures">Pictures</NavLink>
-                <NavLink >More ...</NavLink>
-                <GetSearchElem />
-                
+                <NavLink to="/" className="Navlink">Home</NavLink>
+                <NavLink className="Navlink">About</NavLink>
+                <NavLink to="/Shop" className="Navlink">Shop</NavLink>
+                <NavLink to="/Pictures" className="Navlink">Pictures</NavLink>
+                <NavLink className="Navlink">More ...</NavLink>
+                <GetSearchElem  className="Navlink"/>
             </div>
          
             <FontAwesomeIcon icon={faCartShopping} onClick={openMenu} className='navIcons' />
